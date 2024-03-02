@@ -1,7 +1,7 @@
 # 簡介 / Introduction
-這個專案是用來練習我的Next.js的技術，為以後可能需要用到Next.js來練習。
+透過跟隨官方文件與教程，我用這個專案來熟悉Next.js，為以後作練習。
 
-This repo showcase how I practice Next.js. It aims to prepare myself for using Next.js in the future.
+By following official documents and tutorial, this repo showcast my effort to familiarise Next.js and prepare for future.
 
 # 聯繫方式 / Contacts
 
