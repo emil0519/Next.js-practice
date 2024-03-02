@@ -8,6 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* antialiased smooth the font */}
       <body className={`${raleWay.className} antialiased`}>{children}</body>
     </html>
   );
