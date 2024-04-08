@@ -17,6 +17,7 @@ import { unstable_noStore as noStore } from 'next/cache';
 // Not fit for personaled data or data that are frequently updated
 
 export async function fetchRevenue() {
+  // Concept: noSotre() instruct the browser and CDN not to cache the data, this ensure UI gets the latest info with dynamic rendering 
   noStore();
   // Concept: noStore indicate data should not be cached to render updated data
 
