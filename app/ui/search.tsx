@@ -2,6 +2,8 @@
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+// Cocnept: Debounce, next.js package for debounce
+import { useDebouncedCallback } from 'use-debounce';
 
 
 export default function Search({ placeholder }: { placeholder: string }) {
@@ -11,8 +13,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const { replace } = useRouter();
   // Concept: URL search params, the below function update url query string as user type, this allow shareable url, instant server response when url is read
   // and good for tracking
-  const handleSearch = (input: string) =>{
+  const handleSearch = useDebouncedCallback((input: string) =>{
     const params = new URLSearchParams(searchParams)
+    params.set('page','1')
     if(input) {
       params.set("query", input)
     }
@@ -20,7 +23,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
       params.delete("query")
     }
     replace(`${pathName}?${params.toString()}`)
-  }
+  },300)
   return (
     <div className="relative flex flex-1 flex-shrink-0">
       <label htmlFor="search" className="sr-only">
