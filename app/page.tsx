@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 import { lusitana } from '@/app/ui/font';
 
+// Concept: Auto deploy: Vercel can auto deploy if github repo is connected, a PR or pushes into main branch will be auto-deploy
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
